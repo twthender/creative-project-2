@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Creative Project #2</title>
+
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body onload="loadHolidays()">
+<div class="root-element">
+
+
+    <div class="header">
+        <h1>OpenCalendar</h1>
+    </div>
+
+    <div id="popup" class="popup">
+        <i class="fa fa-times" aria-hidden="true" onclick="closePopup()"></i>
+        <h2 id="popup-title"></h2>
+        <p id="popup-description"></p>
+    </div>
+
+    <div class="selector-container">
+        <i class="fa fa-arrow-left" aria-hidden="true" onclick="moveMonthLeft()"></i>
+        <h2 id="month-display"></h2>
+        <i class="fa fa-arrow-right" aria-hidden="true" onclick="moveMonthRight()"></i>
+    </div>
+
+    <h3 class="centered-title">Filters</h3>
+    <div class="filter-container">
+        <div class="filter selected-filter" id="National holiday" onclick="onFilterClicked('National holiday')">
+            <div class="filter-color-rectangle filter-national-holiday"></div>
+            <h4>National Holiday</h4>
+        </div>
+        <div class="filter selected-filter" id="Local holiday" onclick="onFilterClicked('Local holiday')">
+            <div class="filter-color-rectangle filter-local-holiday"></div>
+            <h4>Local Holiday</h4>
+        </div>
+        <div class="filter selected-filter" id="Orthodox" onclick="onFilterClicked('Orthodox')">
+            <div class="filter-color-rectangle filter-orthodox"></div>
+            <h4>Orthodox</h4>
+        </div>
+        <div class="filter selected-filter" id="Observance" onclick="onFilterClicked('Observance')">
+            <div class="filter-color-rectangle filter-observance"></div>
+            <h4>Observance</h4>
+        </div>
+        <div class="filter selected-filter" id="Sporting event" onclick="onFilterClicked('Sporting event')">
+            <div class="filter-color-rectangle filter-sporting-event"></div>
+            <h4>Sporting Event</h4>
+        </div>
+        <div class="filter selected-filter" id="Worldwide observance" onclick="onFilterClicked('Worldwide observance')">
+            <div class="filter-color-rectangle filter-worldwide-observance"></div>
+            <h4>Worldwide Observance</h4>
+        </div>
+        <div class="filter selected-filter" id="United Nations observance" onclick="onFilterClicked('United Nations observance')">
+            <div class="filter-color-rectangle filter-united-nations-observance"></div>
+            <h4>United Nations Observance</h4>
+        </div>
+        <div class="filter selected-filter" id="Other" onclick="onFilterClicked('Other')">
+            <div class="filter-color-rectangle filter-other"></div>
+            <h4>Other</h4>
+        </div>
+    </div>
+
+    <div id="calendar-container">
+        <div id="calendar-header"></div>
+        <div id="calendar-body"></div>
+    </div>
+</div>
+
+<div class="footer">
+    <p>GitHub repository link <a href="https://github.com/twthender/creative-project-2">here</a>. </p>
+</div>
+
+<script type="application/javascript" src="script.js"></script>
+<script src="https://kit.fontawesome.com/c24e68c1f5.js"></script>
+</body>
+</html>

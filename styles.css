@@ -1,0 +1,450 @@
+* {
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #222222;
+}
+
+.footer {
+    width: 100%;
+    height: 50px;
+    margin-top: 50px;
+    background-color: #111111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup i {
+    cursor: pointer;
+    display: inline;
+}
+
+.popup h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 1200px) {
+
+    .popup {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        width: 80%;
+        min-height: 500px;
+        transform: translate(-50%, -50%);
+        background-color: #111111;
+        display: none;
+        padding: 20px;
+    }
+
+    .root-element {
+        min-height: 800px;
+    }
+
+    .header {
+        width: 100%;
+        height: 70px;
+        background-color: #111111;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .selector-container {
+        display: flex;
+        margin-top: 50px;
+
+        align-items: center;
+        justify-content: center;
+    }
+
+    .selector-container h2 {
+        text-align: center;
+    }
+
+    .selector-container i {
+        margin-left: 20px;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+
+    #calendar-container {
+        width: 100%;
+        margin: auto;
+        margin-top: 50px;
+    }
+
+    #calendar-header {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .day-header {
+        background-color: #111111;
+        padding: 5px;
+        width: 14.28%;
+        font-size: 10px;
+        box-shadow: 1px 0 0 0 #888888,
+        0 1px 0 0 #888888,
+        1px 1px 0 0 #888888,
+        1px 0 0 0 #888888 inset,
+        0 1px 0 0 #888888 inset;
+        box-sizing: border-box;
+    }
+
+    #calendar-body {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        flex-basis: 7%;
+    }
+
+    .placeholder-entry {
+        background-color: #555555;
+        width: 14.28%;
+        min-height: 40px;
+        box-shadow: 1px 0 0 0 #888888,
+        0 1px 0 0 #888888,
+        1px 1px 0 0 #888888,
+        1px 0 0 0 #888888 inset,
+        0 1px 0 0 #888888 inset;
+        box-sizing: border-box;
+    }
+
+    .day-entry {
+        background-color: #333333;
+        padding: 2px;
+        box-shadow: 1px 0 0 0 #aaaaaa,
+        0 1px 0 0 #aaaaaa,
+        1px 1px 0 0 #aaaaaa,
+        1px 0 0 0 #aaaaaa inset,
+        0 1px 0 0 #aaaaaa inset;
+        width: 14.28%;
+        box-sizing: border-box;
+        min-height: 40px;
+    }
+
+    .holiday {
+        font-size: 8px;
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 5px;
+        margin: 3px;
+        padding: 3px;
+        cursor: pointer;
+    }
+
+    .centered-title {
+        width: 100%;
+        text-align: center;
+        margin: 25px auto 20px;
+    }
+
+    .filter-container {
+        width: 80%;
+        display: flex;
+        margin: auto;
+        flex-direction: column;
+    }
+
+    .filter {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        margin-top: 5px;
+        padding: 5px;
+        cursor: pointer;
+    }
+
+    .selected-filter {
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 5px;
+    }
+
+    .filter-color-rectangle {
+        width: 20px;
+        height: 20px;
+        margin-right: 15px;
+    }
+
+    .filter-national-holiday {
+        background-color: #ffff00;
+    }
+
+    .filter-orthodox {
+        background-color: #bdff53;
+    }
+
+    .filter-observance {
+        background-color: #00bbf8;
+    }
+
+    .filter-local-holiday {
+        background-color: #f84500;
+    }
+
+    .filter-sporting-event {
+        background-color: #9b74ea;
+    }
+
+    .filter-worldwide-observance {
+        background-color: #c81385;
+    }
+
+    .filter-united-nations-observance {
+        background-color: #007e00;
+    }
+
+    .filter-other {
+        background-color: #ffffff;
+    }
+
+
+    .national-holiday {
+        border-color: #ffff00;
+    }
+
+    .orthodox {
+        border-color: #bdff53;
+    }
+
+    .observance {
+        border-color: #00bbf8;
+    }
+
+    .local-holiday {
+        border-color: #f84500;
+    }
+
+    .sporting-event {
+        border-color: #9b74ea;
+    }
+
+    .worldwide-observance {
+        border-color: #c81385;
+    }
+
+    .united-nations-observance {
+        border-color: #007e00;
+    }
+}
+
+@media only screen and (min-width: 1201px) {
+
+    .popup {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        width: 500px;
+        min-height: 500px;
+        transform: translate(-50%, -50%);
+        background-color: #111111;
+        display: none;
+        padding: 20px;
+    }
+
+    .root-element {
+        min-height: 1000px;
+    }
+
+    .header {
+        width: 100%;
+        height: 70px;
+        background-color: #111111;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .selector-container {
+        display: flex;
+        margin-top: 50px;
+
+        align-items: center;
+        justify-content: center;
+    }
+
+    .selector-container h2 {
+        width: 200px;
+        text-align: center;
+    }
+
+    .selector-container i {
+        margin-left: 20px;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+
+    #calendar-container {
+        width: 80%;
+        margin: auto;
+        margin-top: 50px;
+    }
+
+    #calendar-header {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .day-header {
+        background-color: #111111;
+        padding: 5px;
+        width: 14.28%;
+        box-shadow: 1px 0 0 0 #888888,
+        0 1px 0 0 #888888,
+        1px 1px 0 0 #888888,
+        1px 0 0 0 #888888 inset,
+        0 1px 0 0 #888888 inset;
+        box-sizing: border-box;
+    }
+
+    #calendar-body {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        flex-basis: 7%;
+    }
+
+    .placeholder-entry {
+        background-color: #555555;
+        width: 14.28%;
+        min-height: 120px;
+        box-shadow: 1px 0 0 0 #888888,
+        0 1px 0 0 #888888,
+        1px 1px 0 0 #888888,
+        1px 0 0 0 #888888 inset,
+        0 1px 0 0 #888888 inset;
+        box-sizing: border-box;
+    }
+
+    .day-entry {
+        background-color: #333333;
+        padding: 5px;
+        box-shadow: 1px 0 0 0 #aaaaaa,
+        0 1px 0 0 #aaaaaa,
+        1px 1px 0 0 #aaaaaa,
+        1px 0 0 0 #aaaaaa inset,
+        0 1px 0 0 #aaaaaa inset;
+        width: 14.28%;
+        box-sizing: border-box;
+        min-height: 120px;
+    }
+
+    .holiday {
+        font-size: 18px;
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 5px;
+        margin: 3px;
+        padding: 3px;
+        cursor: pointer;
+    }
+
+    .centered-title {
+        width: 100%;
+        text-align: center;
+        margin: 25px auto 20px;
+    }
+
+    .filter-container {
+        width: 80%;
+        display: flex;
+        margin: auto;
+        justify-content: space-evenly;
+        align-content: center;
+        flex-direction: row;
+    }
+
+    .filter {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        padding: 5px;
+        cursor: pointer;
+    }
+
+    .selected-filter {
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 5px;
+    }
+
+    .filter-color-rectangle {
+        width: 20px;
+        height: 20px;
+        margin-right: 15px;
+    }
+
+    .filter-national-holiday {
+        background-color: #ffff00;
+    }
+
+    .filter-orthodox {
+        background-color: #bdff53;
+    }
+
+    .filter-observance {
+        background-color: #00bbf8;
+    }
+
+    .filter-local-holiday {
+        background-color: #f84500;
+    }
+
+    .filter-sporting-event {
+        background-color: #9b74ea;
+    }
+
+    .filter-worldwide-observance {
+        background-color: #c81385;
+    }
+
+    .filter-united-nations-observance {
+        background-color: #007e00;
+    }
+
+    .filter-other {
+        background-color: #ffffff;
+    }
+
+
+    .national-holiday {
+        border-color: #ffff00;
+    }
+
+    .orthodox {
+        border-color: #bdff53;
+    }
+
+    .observance {
+        border-color: #00bbf8;
+    }
+
+    .local-holiday {
+        border-color: #f84500;
+    }
+
+    .sporting-event {
+        border-color: #9b74ea;
+    }
+
+    .worldwide-observance {
+        border-color: #c81385;
+    }
+
+    .united-nations-observance {
+        border-color: #007e00;
+    }
+}
